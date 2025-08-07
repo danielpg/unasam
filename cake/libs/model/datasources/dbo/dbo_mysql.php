@@ -560,6 +560,7 @@ class DboMysql extends DboMysqlBase {
 		if (!$config['persistent']) {
 			$this->connection = mysql_connect($config['host'] . ':' . $config['port'], $config['login'], $config['password'], true);
 			$config['connect'] = 'mysql_connect';
+			//var_dump($this->connection);
 		} else {
 			$this->connection = mysql_pconnect($config['host'] . ':' . $config['port'], $config['login'], $config['password']);
 		}

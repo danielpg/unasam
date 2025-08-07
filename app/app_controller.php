@@ -44,6 +44,9 @@ find /var/www/unasam/app/views -name \*.ctp -exec sed -i "s/Page %page% of %page
 
 */
 //Configure::write('debug',2);
+
+
+
 class AppController extends Controller {
 	var $helpers = array('Html','Form','Ajax','Javascript','Session');      
 	var $components = array('RequestHandler',"Session",'Cookie');//
@@ -60,10 +63,6 @@ class AppController extends Controller {
 
 	function beforeFilter(){
 		//Registry::set('controller',$this);
-
-		
-
-
 		ClassRegistry::addObject('controller',$this);
 		
 		Credentials::session_connect($this->Session);//$this->Cookie);
@@ -99,7 +98,7 @@ class AppController extends Controller {
 		if($this->RequestHandler->isAjax())Configure::write('debug',0);
 		
 
-		//$this->load_restrictions();
+		$this->load_restrictions();
 
 		if( Credentials::hasCredentials()==false){
 					if($this->params['controller'] != 'authentication'){
@@ -339,6 +338,7 @@ class Credentials{
 	}
     
     function get($field){
+		//return null;
     	return Credentials::$session->read($field);
 	}
 	
