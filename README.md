@@ -32,3 +32,6 @@ USE your_database_name;
 
 #  IMPORT SQL
 mysql -u root -p unasam < app/migrations/solucion_unasam2.sql
+
+# DEMO USER WEB
+demo / 1234
