@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >	
 	<title><?php echo $title_for_layout?></title>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<?php echo $this->Html->css('cake.generic'); ?>
 	<?php echo $html->css("superfish.css");	 ?>
 	<?php echo $html->css("superfish-navbar.css");	 ?>
@@ -261,7 +261,7 @@ fieldset{width:400px;}
 								<?php if (!($this->params["controller"]=="registros" && $this->params["action"]=="intro")): ?>
 								<ul class="sf-menu">
 								<?php if(Credentials::get("__credentials.Role.codigo")=="admin"): ?>
-								<li><a href="#" tabindex="-1">Definiciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+								<li><a href="#" tabindex="-1"><i class="fa fa-database"></i> &nbsp;Definiciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 									<ul>
 										<li><?php echo $this->Html->link(__('Entidades', true), array('controller' => 'entidades', 'action' => 'index'),array('tabindex' => '-1')); ?> </li>
 										<li><?php echo $this->Html->link(__('Centros de Costos', true), array('controller' => 'oficinas', 'action' => 'index'),array('tabindex' => '-1')); ?> </li>
@@ -271,7 +271,7 @@ fieldset{width:400px;}
 									</ul>
 								</li>
 								<?php endif; ?>
-								<li><a href="#" tabindex="-1">Recibos</a>
+								<li><a href="#" tabindex="-1"><i class="fa fa-list"></i> &nbsp;Recibos</a>
 									<ul>
 										<li><?php echo $this->Html->link(__('Listado', true), array('controller' => 'recibos', 'action' => 'index'),array('tabindex' => '-1')); ?></li>
 										<?php if(Credentials::get("__credentials.Role.codigo")!="consultor"): ?>
@@ -282,7 +282,7 @@ fieldset{width:400px;}
 									</ul>	
 								</li>
 
-								<li><a href="#" tabindex="-1">Precios</a>
+								<li><a href="#" tabindex="-1"><i class="fa fa-money"></i> &nbsp;Precios</a>
 									<ul>
 										<li><?php echo $this->Html->link(__('Listado', true), array('controller' => 'precios', 'action' => 'index'),array('tabindex' => '-1')); ?></li>
 										<?php if(Credentials::get("__credentials.Role.codigo")=="admin"): ?>
@@ -292,7 +292,7 @@ fieldset{width:400px;}
 								</li>
 								</li>
 								<?php if(Credentials::get("__credentials.Role.codigo")=="admin"): ?>
-								<li><a href="#" tabindex="-1">Sistema</a>
+								<li><a href="#" tabindex="-1"><i class="fa fa-cogs"></i> &nbsp;Sistema</a>
 									<ul>
 										<li><?php echo $this->Html->link(__('Usuarios', true), array('controller' => 'logins', 'action' => 'index'),array('tabindex' => '-1')); ?></li>
 										<li><?php echo $this->Html->link(__('Nuevo Usuario', true), array('controller' => 'logins', 'action' => 'add'),array('tabindex' => '-1')); ?></li>
@@ -300,7 +300,7 @@ fieldset{width:400px;}
 								</li>
 								<?php endif; ?>
 								<li>
-									<a href="#" tabindex="-1">Reporte</a>
+									<a href="#" tabindex="-1"><i class="fa fa-folder-opem"></i> &nbsp;Reporte</a>
 									<ul>
 										<li><?php echo $this->Html->link(__('Exportar', true), array('controller' => 'recibos', 'action' => 'report'),array('tabindex' => '-1')); ?></li>
 										<li><?php echo $this->Html->link(__('Importar', true), array('controller' => 'recibos', 'action' => 'importar'),array('tabindex' => '-1')); ?></li>

@@ -20,7 +20,7 @@
 .sf-menu ul {
 	position:		absolute;
 	top:			-999em;
-	width:			10em; /* left offset of submenus need to match (see below) */
+	width:			15em; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
 	width:			100%;
@@ -66,6 +66,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu {
 	float:			left;
 	margin-bottom:	0.5em;
+	margin-top: 0.5em;
 }
 .sf-menu a {
 	/*border-left:	1px solid #fff;*/
@@ -76,6 +77,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 	color:			white;
+	font-size: 13px !important;
 }
 .sf-menu li {
 	background:		#5C6467;/*#BDD2FF*/
