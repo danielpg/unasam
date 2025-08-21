@@ -26,12 +26,8 @@ default_authentication_plugin = mysql_native_password
 # Restart Mysql
 sudo systemctl restart mysql
 
-#  Create database
-CREATE DATABASE unasam;
-USE your_database_name;
-
 #  IMPORT SQL
-mysql -u root -p unasam < app/migrations/solucion_unasam2.sql
+mysql -u root -p < app/migrations/solucion_unasam2.sql
 
 # DEMO USER WEB
 demo / 1234
